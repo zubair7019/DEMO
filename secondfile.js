@@ -17,6 +17,10 @@
 var header=document.getElementById('main-header')
 header.style.borderBottom='solid 3px #000'
 
-//  var additem=document.getElementsByClassName('title')
-//  additem.style.borderBottom=' solid 2px green'
+var items=document.getElementsByClassName('list-group-item')
+console.log(items)
+console.log(items[1])
+// items[1].style.fontweight='bold'
 
+items[2].style.background='green'
+items.style.fontweight='bold'
