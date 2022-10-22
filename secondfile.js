@@ -64,18 +64,93 @@ header.style.borderBottom='solid 3px #000'
 
 /////queryselectorall///
 
-var titles=document.querySelectorAll('.title')
-console.log(titles)
-titles[0].textContent='hello'
+// var titles=document.querySelectorAll('.title')
+// console.log(titles)
+// titles[0].textContent='hello'
 
-var odd=document.querySelectorAll('li:nth-child(odd)')
+// var odd=document.querySelectorAll('li:nth-child(odd)')
 
-for(let i=0; i<odd.length;i++)
-{
-    odd[i].style.backgroundColor='green'
-}
-var even=document.querySelectorAll('li:nth-child(even)')
-for(let i=0;i<even.length;i++)
-{
-    even[i].style.backgroundColor='yellow'
-}
+// for(let i=0; i<odd.length;i++)
+// {
+//     odd[i].style.backgroundColor='green'
+// }
+// var even=document.querySelectorAll('li:nth-child(even)')
+// for(let i=0;i<even.length;i++)
+// {
+//     even[i].style.backgroundColor='yellow'
+// }
+
+//////traverse the dom////
+
+var itemsList=document.querySelector('#items')
+//parent node//
+// console.log(itemsList.parentNode)
+// itemsList.parentNode.style.backgroundColor='#f4f4f4'
+// console.log(itemsList.parentNode.parentNode)
+
+///parent element//
+// console.log(itemsList.parentElement)
+// itemsList.parentElement.style.backgroundColor='#f4f4f4'
+// console.log(itemsList.parentElement.parentElement)
+
+///CHILDREN//
+
+// console.log(itemsList.childNodes)
+
+// console.log(itemsList.children)
+// console.log(itemsList.children[1])
+// itemsList.children[1].style.backgroundColor='yellow'
+
+// //first child//
+
+// console.log(itemsList.firstChild)
+// //first element child//
+// console.log(itemsList.firstElementChild)
+// itemsList.firstElementChild.textContent='hello'
+
+// ///next sibling//
+// console.log(itemsList.nextElementSibling)
+
+//previoussiblibilg//
+// console.log(itemsList.previousSibling)
+
+////previous element sibling//
+// console.log(itemsList.previousElementSibling)
+
+//create element//
+
+//create div//
+var newDiv=document.createElement('div')
+//add class//
+newDiv.className='hello'
+//add id
+newDiv.id='hii'
+//add atribute//
+newDiv.setAttribute('title','hello div')
+
+
+//create text node//
+var newDivtext=document.createTextNode('HELLO WORD')
+
+//add text to div//
+newDiv.appendChild(newDivtext)
+
+console.log(newDiv)
+
+var container=document.querySelector('header .container')
+var h1= document.querySelector('header h1')
+
+console.log(newDiv)
+newDiv.style.fontSize='20px'
+
+container.insertBefore(newDiv,h1)
+///////
+
+let div2=document.createElement('div')
+let div2text=document.createTextNode('hello world')
+div2.append(div2text)
+let container2=document.querySelector('div .list-group')
+let li=document.querySelector('div .list-group-item')
+
+container2.insertBefore(div2,li)
+
